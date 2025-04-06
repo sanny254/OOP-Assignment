@@ -1,0 +1,21 @@
+class Animal:
+    def move(self):
+        pass  # Abstract method (to be overridden)
+
+class Bird(Animal):
+    def move(self):
+        return "Flying! 🦅"  # Polymorphism: Different implementation
+
+class Fish(Animal):
+    def move(self):
+        return "Swimming! 🐟"  # Polymorphism: Different implementation
+
+# Using polymorphism
+animals = [Bird(), Fish()]
+
+for animal in animals:
+    print(animal.move())
+
+# Output:
+# Flying! 🦅
+# Swimming! 🐟
